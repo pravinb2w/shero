@@ -297,7 +297,7 @@ header .logo {
   height       : var(--size-44);
   border-radius: 100px;
   padding      : 0 22px;
-  border       : 2px solid transparent;
+  border       : none;
   outline      : none;
   box-shadow   : none;
   font-size    : var(--size-16);
@@ -310,6 +310,7 @@ header .logo {
 .btn.btn-primary:hover {
   border-color: #8B285D;
   background  : transparent !important;
+  border: 2px solid var(--pink-variant1);
 }
 
 .btn.btn-secondary {
