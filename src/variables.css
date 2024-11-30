@@ -64,11 +64,15 @@
   --size-60  : 3.125vw;
   --size-65  : 3.385vw;
   --size-70  : 3.646vw;
+  --size-72  : 3.75vw;
   --size-77  : 4.01vw;
   --size-80  : 4.167vw;
+  --size-85  : 4.427vw;
+  --size-88  : 4.583vw;
   --size-90  : 4.688vw;
   --size-96  : 5vw;
   --size-100 : 5.208vw;
+  --size-105 : 5.469vw;
   --size-108 : 5.625vw;
   --size-110 : 5.729vw;
   --size-120 : 6.25vw;
@@ -116,22 +120,34 @@
   --size-474 : 24.688vw;
   --size-480 : 25vw;
   --size-490 : 25.521vw;
+  --size-498 : 25.938vw;
   --size-500 : 26.042vw;
+  --size-517 : 26.927vw;
   --size-520 : 27.083vw;
   --size-530 : 27.604vw;
   --size-550 : 28.646vw;
   --size-567 : 29.531vw;
+  --size-580 : 30.208vw;
+  --size-595 : 30.99vw;
   --size-600 : 31.25vw;
+  --size-630 : 32.813vw;
+  --size-657 : 34.219vw;
   --size-668 : 34.792vw;
+  --size-696 : 36.25vw;
   --size-777 : 40.469vw;
   --size-830 : 43.229vw;
+  --size-840 : 43.75vw;
   --size-850 : 44.271vw;
+  --size-896 : 46.667vw;
   --size-900 : 46.875vw;
+  --size-954 : 49.688vw;
+  --size-1068: 55.625vw;
   --size-1198: 62.396vw;
+  --size-1340: 69.792vw;
   --size-1450: 75.521vw;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:769px) {
   :root {
     --size-1   : 1px;
     --size-2   : 2px;
@@ -187,11 +203,15 @@
     --size-60  : 60px;
     --size-65  : 65px;
     --size-70  : 70px;
+    --size-72  : 72px;
     --size-77  : 77px;
     --size-80  : 80px;
+    --size-85  : 85px;
+    --size-88  : 88px;
     --size-90  : 90px;
     --size-96  : 96px;
     --size-100 : 100px;
+    --size-105 : 105px;
     --size-108 : 108px;
     --size-110 : 110px;
     --size-120 : 120px;
@@ -239,18 +259,28 @@
     --size-474 : 474px;
     --size-480 : 480px;
     --size-490 : 490px;
+    --size-498 : 498px;
     --size-500 : 500px;
+    --size-517 : 517px;
     --size-520 : 520px;
-    --size-600 : 600px;
+    --size-580 : 580px;
     --size-530 : 530px;
     --size-550 : 550px;
     --size-567 : 567px;
+    --size-595 : 595px;
+    --size-600 : 600px;
+    --size-657 : 657px;
     --size-668 : 668px;
     --size-777 : 777px;
     --size-830 : 830px;
+    --size-840 : 840px;
     --size-850 : 850px;
+    --size-896 : 896px;
     --size-900 : 900px;
+    --size-954 : 954px;
+    --size-1068: 1068px;
     --size-1198: 1198px;
+    --size-1340: 1340px;
     --size-1450: 1450px;
   }
 }

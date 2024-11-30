@@ -9,7 +9,13 @@ const Header = () => {
               src={Logo}
               alt="Shero Sparks Logo"
             />
-      <button className="btn btn-primary">Join our program</button>
+      <button
+        className="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Join our program
+      </button>
   </header>
     </>
   )
