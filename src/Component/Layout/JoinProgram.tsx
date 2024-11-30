@@ -14,6 +14,11 @@ const JoinProgram = () => {
   // Handle input change
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
+    if ((name === "phoneNumber" || name === "whatsAppNumber") && !/^\d{0,10}$/.test(value)) {
+      return; // Stop processing if input is invalid
+    }
+
     setFormData({
       ...formData,
       [name]: type === "checkbox" ? checked : value,
@@ -33,6 +38,14 @@ const JoinProgram = () => {
     e.preventDefault();
     console.log("Form Submitted: ", formData);
   };
+
+const isFormValid =
+    formData.firstName.trim() &&
+    formData.lastName.trim() &&
+    formData.email.trim() &&
+    formData.phoneNumber.trim().length === 10 && // Ensure exactly 10 digits
+    formData.whatsAppNumber.trim().length === 10;
+
   return (
     <div
       className="modal fade"
@@ -96,6 +109,8 @@ const JoinProgram = () => {
                     placeholder="Phone number"
                     value={formData.phoneNumber}
                     onChange={handleChange}
+                    pattern="\d{10}" // HTML5 validation
+                    // maxLength="10" // Ensure only 10 characters
                   />
                 </div>
                 <div className="mb-3">
@@ -108,6 +123,8 @@ const JoinProgram = () => {
                     placeholder="WhatsApp number"
                     value={formData.whatsAppNumber}
                     onChange={handleChange}
+                    pattern="\d{10}" // HTML5 validation
+                    // maxLength="10" // Ensure only 10 characters
                   />
                 </div>
                 <div className="form-check mb-4 d-flex justify-content-end">
@@ -123,7 +140,7 @@ const JoinProgram = () => {
                     Same as your phone number
                   </label>
                 </div>
-                <button type="submit" className="m-auto btn btn-primary w-100 py-2">
+                <button type="submit" className="m-auto btn btn-primary w-100 py-2" disabled={!isFormValid}>
                   Join our program
                 </button>
               </form>

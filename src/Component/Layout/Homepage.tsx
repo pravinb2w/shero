@@ -349,7 +349,8 @@ const Homepage = () => {
                   success. This empowering e-book equips you with tools to
                   overcome challenges and become truly unstoppable
                 </h4>
-                <button className="btn btn-primary">Buy now</button>
+                <button className="btn btn-primary"  data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Buy now</button>
               </div>
             </div>
             <div className="col-md-6">
@@ -363,7 +364,8 @@ const Homepage = () => {
                   This revolutionary assessment tool has been developed through
                   years of research and real-world application.
                 </h4>
-                <button className="btn btn-primary">Buy now</button>
+                <button className="btn btn-primary"  data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Buy now</button>
               </div>
             </div>
           </div>
