@@ -30,6 +30,7 @@ const StorySlider: React.FC = () => {
     <Carousel
       responsive={responsive}
       additionalTransfrom={0}
+      autoPlay={true}
       autoPlaySpeed={1000}
       centerMode={false}
       className=""

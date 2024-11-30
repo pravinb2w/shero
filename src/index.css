@@ -684,7 +684,7 @@ ul.list-secondary li span.icon:before {
 
 .sec-nine-plans h2,
 .sec-eleven-about h2 {
-  padding-bottom: var(--size-50);
+  padding-bottom: var(--size-40);
 }
 
 .sec-nine-plans img {
@@ -693,7 +693,7 @@ ul.list-secondary li span.icon:before {
 }
 
 .sec-ten-faq h2.h1-title {
-  padding-bottom: var(--size-40);
+  padding-bottom: var(--size-10);
 }
 
 .plans {
