@@ -445,7 +445,7 @@ section.section-main {
   height        : var(--size-400);
 }
 
-.webinar-details h2 {
+.sec-three-webinar h2 {
   margin-bottom: var(--size-85);
   color        : #000;
 }
@@ -455,12 +455,12 @@ section.section-main {
 
 }
 
-.swiper-slide .webinar-box {
+/* .swiper-slide .webinar-box {
   display        : flex;
   justify-content: center;
-}
+} */
 
-.webinar-details .webinar-content {
+.webinar-content {
   background-color: #ff5bb9;
   border-radius   : var(--size-10);
   color           : white;
@@ -468,7 +468,7 @@ section.section-main {
   min-height      : var(--size-220);
 }
 
-.webinar-details .webinar-content span {
+ .webinar-content span {
   font-size          : 2.5rem;
   font-weight        : bold;
   margin             : 0;
@@ -483,7 +483,7 @@ section.section-main {
   line-height        : 1;
 }
 
-.webinar-details .webinar-content p {
+ .webinar-content p {
   margin   : var(--size-10) 0 0;
   font-size: 1rem;
   font-size: var(--size-16);
@@ -514,10 +514,6 @@ section.section-main {
   background-image       : linear-gradient(45deg, #ff5bb9, #6a5af9);
   -webkit-background-clip: text;
   -webkit-text-stroke    : 2px transparent;
-}
-
-.gradient-outline:hover {
-  -webkit-text-stroke: 0;
 }
 
 .bg-light {
@@ -1019,7 +1015,7 @@ input#isSameAsPhone {
     line-height: var(--size-40) !important;
   }
 
-  .webinar-details .webinar-content {
+ .webinar-content {
     margin-bottom: 20px;
   }
 
@@ -1181,10 +1177,10 @@ input#isSameAsPhone {
   width: var(--size-300);
 }
 
-.webinar-details {
+/* .webinar-details {
   display        : flex;
   justify-content: space-between;
-}
+} */
 
 .custom-arrow.custom-left-arrow,
 .custom-arrow.custom-right-arrow {
@@ -1196,7 +1192,6 @@ input#isSameAsPhone {
   position : absolute;
   bottom   : calc(-1 * var(--size-10));
   left     : 50%;
-  /* transform: translate(calc(-1* var(--size-10)), calc(-1* var(--size-10))); */
   transform:translate(calc(-1* var(--size-10)), calc(-1* var(--size-10)));
 }
 
@@ -1204,7 +1199,6 @@ input#isSameAsPhone {
   position : absolute;
   bottom   : calc(-1 * var(--size-60));
   left     : 50%;
-  /* transform: translate(var(--size-50), calc(-1* var(--size-60))); */
   transform: translate(var(--size-30), calc(-1* var(--size-60)));
 }
 
@@ -1222,4 +1216,18 @@ input#isSameAsPhone {
 
 .story-img img {
   border-radius: var(--size-10);
+}
+
+.sec-three-webinar ul.react-multi-carousel-track {
+  padding-bottom: var(--size-20);
+}
+
+.sec-three-webinar .custom-arrow.custom-left-arrow{
+  left: 47%;
+  right:auto
+}
+
+.sec-three-webinar .custom-arrow.custom-right-arrow {
+  right: 49% !important;
+  left: auto;
 }
