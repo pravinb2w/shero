@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import Logo from '../../Assets/logo.svg'
 
-const Header = () => {
+const Header = ({openForm}:{openForm:MouseEventHandler<HTMLButtonElement>}) => {
   return (
     <>
     <header className="r-between">
@@ -11,8 +11,7 @@ const Header = () => {
             />
       <button
         className="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+        onClick={openForm}
       >
         Join our program
       </button>

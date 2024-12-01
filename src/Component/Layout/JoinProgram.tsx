@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import Swal from "sweetalert2";
+import { Modal } from "bootstrap";
+
+
 import IconClose from '../../Assets/close-square.svg';
 
 const JoinProgram = () => {
@@ -10,11 +14,13 @@ const JoinProgram = () => {
     whatsAppNumber: "",
     isSameAsPhone: false,
   });
+  const formRef = useRef<HTMLFormElement | undefined>(undefined);
+  const [isSubmit, setIsSubmit] = useState<boolean>(false);
+
 
   // Handle input change
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
     if ((name === "phoneNumber" || name === "whatsAppNumber") && !/^\d{0,10}$/.test(value)) {
       return; // Stop processing if input is invalid
     }
@@ -34,10 +40,71 @@ const JoinProgram = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted: ", formData);
+    setIsSubmit(true);
+
+    console.log( ' form dtaa ',  new FormData(formRef.current));
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzbuuyurFsxAWGxMewhlrX0fajodB1fvAB4IUo73uO6Y1Ra2PCkUWJJNlhSf64-n1wF/exec'; // Replace with your Web App URL
+  
+    // Add enquiry date to formData
+    const formDataWithDate = {
+      ...formData,
+      enquiryDate: new Date().toLocaleString('en-GB', { // Format date as dd/mm/yyyy hh:mm:ss
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      }),
+    };
+  
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        body: (`firstName=${formData.firstName}&lastName=${formData.lastName}&email=${formData.email}&phoneNumber=${formData.phoneNumber}&whatsAppNumber=${formData.whatsAppNumber}&isSameAsPhone=${formData.isSameAsPhone}`),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      }).then(res => res.text()).then(data => {
+        console.log( data );
+        const modalElement = document.getElementById("exampleModal");
+        if (modalElement) {
+          const modalInstance = Modal.getInstance(modalElement) || new Modal(modalElement);
+          modalInstance.hide();
+
+          document.body.classList.remove("modal-open");
+          const backdrop = document.querySelector(".modal-backdrop");
+          if (backdrop) {
+            backdrop.remove();
+          }
+        }
+        Swal.fire({
+          icon: "success",
+          title: "Enquiry Submitted",
+          text: "Thank you for registering!",
+          confirmButtonText: "OK",
+        });
+        setIsSubmit(false);
+
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          whatsAppNumber: "",
+          isSameAsPhone: false,
+        });
+
+      }).catch(error => console.log( ' fetch derror ', error));
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error!');
+    }
   };
+  
 
 const isFormValid =
     formData.firstName.trim() &&
@@ -62,7 +129,7 @@ const isFormValid =
               aria-label="Close"/>
            
               <h1 className="mb-4">Registration</h1>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} ref={formRef}>
                 <div className="mb-3">
                  
                   <input
@@ -140,7 +207,7 @@ const isFormValid =
                     Same as your phone number
                   </label>
                 </div>
-                <button type="submit" className="m-auto btn btn-primary w-100 py-2" disabled={!isFormValid}>
+                <button type="submit" className="m-auto btn btn-primary w-100 py-2" disabled={!isFormValid || isSubmit}>
                   Join our program
                 </button>
               </form>

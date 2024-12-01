@@ -21,6 +21,8 @@ import Story4 from "../../Assets/story-image-4.jpg";
 import ImgEbook from "../../Assets/icon-ebook.svg";
 import ImgMeenChabbira from "../../Assets/meena-chabbira.svg";
 import JoinProgram from "./JoinProgram.tsx";
+import { Modal } from "bootstrap";
+
 
 import CarouselSlider from "./CarouselSlider.tsx";
 import "../../../node_modules/react-multi-carousel/lib/styles.css";
@@ -29,13 +31,21 @@ import Carousel from "react-multi-carousel";
 import WebinarSlider from "./Webinar.tsx";
 
 const Homepage = () => {
+
+  const openForm = () => {
+    const modalElement = document.getElementById("exampleModal");
+    if (modalElement) {
+      const modalInstance = Modal.getInstance(modalElement) || new Modal(modalElement);
+      modalInstance.show();
+    }
+  }
   return (
     <div className="wrapper">
       <JoinProgram />
       <StickyFooter />
       <section className="section-main">
         <div className="container p-0">
-          <Header />
+          <Header openForm={openForm} />
           <div className="row sec-inner">
             <div className="col-12 col-md-6">
               <div className="left-inner">
@@ -62,8 +72,7 @@ const Homepage = () => {
                 </h4>
                 <button
                   className="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
+                  onClick={openForm}
                 >
                   Join our program
                 </button>
@@ -349,8 +358,7 @@ const Homepage = () => {
                   success. This empowering e-book equips you with tools to
                   overcome challenges and become truly unstoppable
                 </h4>
-                <button className="btn btn-primary"  data-bs-toggle="modal"
-        data-bs-target="#exampleModal">Buy now</button>
+                <button className="btn btn-primary"  >Buy now</button>
               </div>
             </div>
             <div className="col-md-6">
@@ -364,8 +372,7 @@ const Homepage = () => {
                   This revolutionary assessment tool has been developed through
                   years of research and real-world application.
                 </h4>
-                <button className="btn btn-primary"  data-bs-toggle="modal"
-        data-bs-target="#exampleModal">Buy now</button>
+                <button className="btn btn-primary"  >Buy now</button>
               </div>
             </div>
           </div>
