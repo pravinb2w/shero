@@ -12,7 +12,7 @@ const ToolsSlider: React.FC = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1920 },
-      items: 5,
+      items: 6,
     },
     desktop: {
       breakpoint: { max: 1920, min: 1024 },

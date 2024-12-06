@@ -1236,3 +1236,9 @@ input#isSameAsPhone {
 .carousel-item-spacing {
   padding: 0 var(--size-14); /* Adjust gap width here */
 }
+
+@media screen and (max-width: 670px) {
+  .carousel-item-spacing {
+    padding: 0 110px; /* Adjust gap width here */
+  }
+}
