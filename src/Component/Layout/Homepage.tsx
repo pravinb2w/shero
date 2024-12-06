@@ -444,7 +444,7 @@ const Homepage = () => {
               <h2 className="h1-title">
                 Meet your Host
                 <br />
-                <span className="text-pink">Ms.Meena Chabbria</span>
+                <span className="text-pink">Ms. Meena Chabbria</span>
               </h2>
               <img
                 src={ImgMeenChabbira}

@@ -719,7 +719,7 @@ ul.list-secondary li span.icon:before {
 }
 
 .plans button {
-  position: absolute !important;
+  position: absolute;
   bottom  : var(--size-30);
 }
 
@@ -936,6 +936,11 @@ input#isSameAsPhone {
   .container-xl,
   .container-xxl {
     max-width: var(--size-1340);
+  }
+
+  .plans button {
+    position: absolute !important;
+    bottom  : var(--size-30);
   }
 }
 
@@ -1241,4 +1246,13 @@ input#isSameAsPhone {
   .carousel-item-spacing {
     padding: 0 110px; /* Adjust gap width here */
   }
+  .plans button {
+    position: relative;
+    bottom: auto;
+  }
+}
+
+.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
 }

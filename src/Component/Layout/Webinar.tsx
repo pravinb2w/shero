@@ -19,8 +19,12 @@ const WebinarCarouselSlider: React.FC = () => {
       breakpoint: { max: 1024, min: 768 },
       items: 4,
     },
+    mobile1: {
+      breakpoint: { max: 768, min: 468 },
+      items: 2,
+    },
     mobile: {
-      breakpoint: { max: 768, min: 0 },
+      breakpoint: { max: 468, min: 0 },
       items: 1,
     },
   };
