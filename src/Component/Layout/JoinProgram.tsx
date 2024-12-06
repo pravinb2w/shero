@@ -46,6 +46,7 @@ const JoinProgram = () => {
 
     console.log( ' form dtaa ',  new FormData(formRef.current));
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzbuuyurFsxAWGxMewhlrX0fajodB1fvAB4IUo73uO6Y1Ra2PCkUWJJNlhSf64-n1wF/exec'; // Replace with your Web App URL
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbxGi4z21twK8dZzKg0trJ-LC1Cm6ll2bSu9vR_P9DAZq4RCm4B-gGT2HQNNzwlSKXlC/exec'; // Replace with your Web App URL
   
     // Add enquiry date to formData
     const formDataWithDate = {
@@ -61,9 +62,10 @@ const JoinProgram = () => {
     };
   
     try {
+      let newDate = new Date()
       const response = await fetch(scriptURL, {
         method: 'POST',
-        body: (`firstName=${formData.firstName}&lastName=${formData.lastName}&email=${formData.email}&phoneNumber=${formData.phoneNumber}&whatsAppNumber=${formData.whatsAppNumber}&isSameAsPhone=${formData.isSameAsPhone}`),
+        body: (`firstName=${formData.firstName}&lastName=${formData.lastName}&email=${formData.email}&phoneNumber=${formData.phoneNumber}&whatsAppNumber=${formData.whatsAppNumber}&newDate=${newDate}`),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },

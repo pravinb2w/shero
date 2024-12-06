@@ -8,12 +8,7 @@ import IconMember3 from "../../Assets/member-3.svg";
 import MainSectionImage from "../../Assets/main-sec-pic.svg";
 import ImgSkills from "../../Assets/skill-img.svg";
 import StickyFooter from "./StickyFooter.tsx";
-import ToolLogo1 from "../../Assets/tool-logo-1.svg";
-import ToolLogo2 from "../../Assets/tool-logo-2.svg";
-import ToolLogo3 from "../../Assets/tool-logo-3.svg";
-import ToolLogo4 from "../../Assets/tool-logo-4.svg";
-import ToolLogo5 from "../../Assets/tool-logo-5.svg";
-import ToolLogo6 from "../../Assets/tool-logo-6.svg";
+
 import Story1 from "../../Assets/story-image-1.jpg";
 import Story2 from "../../Assets/story-image-2.jpg";
 import Story3 from "../../Assets/story-image-3.jpg";
@@ -29,6 +24,7 @@ import "../../../node_modules/react-multi-carousel/lib/styles.css";
 import StorySlider from "../StoriesSlider.tsx";
 import Carousel from "react-multi-carousel";
 import WebinarSlider from "./Webinar.tsx";
+import ToolsSlider from "../ToolsSlider.tsx";
 
 const Homepage = () => {
 
@@ -258,63 +254,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="sec-six-tools text-center">
-        <div className="container p-0">
-          <h2 className="font-bold h1-title">
-            <span className="text-pink">Tools</span> you will learn
-          </h2>
-          <div className="r-between tool-list">
-            <div className="box">
-              <img src={ToolLogo1} alt="tools logo" />
-            </div>
-            <div className="box">
-              <img src={ToolLogo2} alt="tools logo" />
-            </div>
-            <div className="box">
-              <img src={ToolLogo3} alt="tools logo" />
-            </div>
-            <div className="box">
-              <img src={ToolLogo4} alt="tools logo" />
-            </div>
-            <div className="box">
-              <img src={ToolLogo5} alt="tools logo" />
-            </div>
-            <div className="box">
-              <img src={ToolLogo6} alt="tools logo" />
-            </div>
-          </div>
-          <h2 className="h1-title">
-            After attending this webinar, you'll have the tools and confidence
-            to achieve{" "}
-            <span className="text-pink">
-              your goals and build a successful business
-            </span>{" "}
-            you can be proud of!
-          </h2>
-          <ul className="list-primary p-0">
-            <li>
-              <span className="icon"></span>How to identify profitable business
-              opportunities.
-            </li>
-            <li>
-              <span className="icon"></span>Crafting a winning product or
-              service strategy.
-            </li>
-            <li>
-              <span className="icon"></span>Secrets to building a brand that
-              attracts loyal customers.
-            </li>
-            <li>
-              <span className="icon"></span>Marketing on a budget and reaching
-              your audience effectively.
-            </li>
-            <li>
-              <span className="icon"></span>Proven steps to scale without
-              stress.
-            </li>
-          </ul>
-        </div>
-      </section>
+     <ToolsSlider />
 
       <section className="sec-seven-stories bg-dark text-center">
         <div className="container-fluid">

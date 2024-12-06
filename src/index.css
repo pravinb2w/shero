@@ -1231,3 +1231,8 @@ input#isSameAsPhone {
   right: 49% !important;
   left: auto;
 }
+
+
+.carousel-item-spacing {
+  padding: 0 var(--size-14); /* Adjust gap width here */
+}
