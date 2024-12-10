@@ -1,12 +1,16 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css"; // Ensure this CSS is imported
-import ToolLogo1 from "../Assets/tool-logo-1.svg";
-import ToolLogo2 from "../Assets/tool-logo-2.svg";
-import ToolLogo3 from "../Assets/tool-logo-3.svg";
-import ToolLogo4 from "../Assets/tool-logo-4.svg";
-import ToolLogo5 from "../Assets/tool-logo-5.svg";
-import ToolLogo6 from "../Assets/tool-logo-6.svg";
+import ToolLogo1 from "../Assets/chatgpt-logo.svg";
+import ToolLogo2 from "../Assets/canvas-logo.svg";
+import ToolLogo3 from "../Assets/descript-logo.svg";
+import ToolLogo4 from "../Assets/copyai-logo.svg";
+import ToolLogo5 from "../Assets/grammarly-logo.svg";
+import ToolLogo6 from "../Assets/otter-logo.svg";
+import ToolLogo7 from "../Assets/midjourney-logo.svg";
+import ToolLogo8 from "../Assets/jasper-logo.svg";
+import ToolLogo9 from "../Assets/loom-logo.svg";
+import ToolLogo10 from "../Assets/deel-logo.svg";
 
 const ToolsSlider: React.FC = () => {
   const responsive = {
@@ -59,22 +63,34 @@ const ToolsSlider: React.FC = () => {
         >
           {/* Tool Logos */}
           <div className="box">
-            <img src={ToolLogo1} alt="Tool 1" />
+            <img src={ToolLogo1} alt="ChatGPT" className="chat-gpt" />
           </div>
           <div className="box">
-            <img src={ToolLogo2} alt="Tool 2" />
+            <img src={ToolLogo2} alt="Canvas" className="canvas-ai" />
           </div>
           <div className="box">
-            <img src={ToolLogo3} alt="Tool 3" />
+            <img src={ToolLogo3} alt="descript" />
           </div>
           <div className="box">
-            <img src={ToolLogo4} alt="Tool 4" />
+            <img src={ToolLogo4} alt="CopyAI" />
           </div>
           <div className="box">
-            <img src={ToolLogo5} alt="Tool 5" />
+            <img src={ToolLogo5} alt="Grammarly" style={{ height: '60px'}} />
           </div>
           <div className="box">
-            <img src={ToolLogo6} alt="Tool 6" />
+            <img src={ToolLogo6} alt="Otter" className="otter-ai"/>
+          </div>
+          <div className="box">
+            <img src={ToolLogo7} alt="Midjourney" />
+          </div>
+          <div className="box">
+            <img src={ToolLogo8} alt="Jasper" />
+          </div>
+          <div className="box">
+            <img src={ToolLogo9} alt="Loom" />
+          </div>
+          <div className="box">
+            <img src={ToolLogo10} alt="Deel" />
           </div>
         </Carousel>
 

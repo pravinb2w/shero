@@ -942,9 +942,27 @@ input#isSameAsPhone {
     position: absolute !important;
     bottom  : var(--size-30);
   }
+  .chat-gpt {
+    height: 55px !important;
+  }
+  .canvas-ai {
+    height: 70px !important;
+  }
+  .otter-ai {
+    height: 70px !important;
+  }
 }
 
 @media screen and (max-width:768px) {
+  .chat-gpt {
+    height: 60px !important;
+  }
+  .canvas-ai {
+    height: 70px !important;
+  }
+  .otter-ai {
+    height: 70px !important;
+  }
 
   .container,
   .container-lg,
