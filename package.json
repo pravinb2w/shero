@@ -2,6 +2,7 @@
   "name": "shero-sparks",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://meenachabbria.com/sherospark",
   "dependencies": {
     "@mui/styles": "^6.1.9",
     "@testing-library/jest-dom": "^5.17.0",
