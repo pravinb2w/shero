@@ -9,10 +9,6 @@ import MainSectionImage from "../../Assets/main-sec-pic.svg";
 import ImgSkills from "../../Assets/skill-img.svg";
 import StickyFooter from "./StickyFooter.tsx";
 
-import Story1 from "../../Assets/story-image-1.jpg";
-import Story2 from "../../Assets/story-image-2.jpg";
-import Story3 from "../../Assets/story-image-3.jpg";
-import Story4 from "../../Assets/story-image-4.jpg";
 import ImgEbook from "../../Assets/icon-ebook.svg";
 import ImgMeenChabbira from "../../Assets/meena-chabbira.svg";
 import JoinProgram from "./JoinProgram.tsx";
@@ -38,7 +34,7 @@ const Homepage = () => {
   return (
     <div className="wrapper">
       <JoinProgram />
-      <StickyFooter />
+      <StickyFooter openForm={openForm} />
       <section className="section-main">
         <div className="container p-0">
           <Header openForm={openForm} />
