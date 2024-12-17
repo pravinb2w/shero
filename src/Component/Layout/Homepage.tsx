@@ -51,7 +51,7 @@ const Homepage = () => {
                 <div className="r-start my-4 icons-sm icons-sm-group">
                   <div className="d-flex">
                     <img src={IconCalendar} alt="" />
-                    <h4 className="ms-2 font-normal">12 Nov 2024</h4>
+                    <h4 className="ms-2 font-normal">21 Dec 2024</h4>
                   </div>
                   <div className="d-flex">
                     <img src={IconClock} alt="" />
@@ -250,7 +250,7 @@ const Homepage = () => {
         </div>
       </section>
 
-     <ToolsSlider />
+      <ToolsSlider />
 
       <section className="sec-seven-stories bg-dark text-center">
         <div className="container-fluid">
